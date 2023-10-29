@@ -29,20 +29,24 @@ Tools used are highlighted in `pre-formatting`
   - Auto-ARIMA (in `pmdarima`) applied to individual product family in each store, with promotion, national holidays, and oil price as exogenous variables.
   - Submission score 0.47397
 3. Machine Learning technique
-  - `HistGradientBoostingRegressor` (in `scikit-learn`) used for prediction, with promotion, national holidays, and oil price as variables.
+  3.1. `HistGradientBoostingRegressor` (in `scikit-learn`) as estimator, with promotion, national holidays, and oil price as variables
   - Dates tranformed using teigonometric features to indicate seasonal and cyclical characteristic of data, which are :
     1) Day in a given year
     2) Day in a given month and
     3) Day in a given week
   - Lag features of 3-day lags used with window rolling prediction
   - Submission score 3.28478
+  3.2. `LightGBM` as estimator, with promotion, national holidays, and oil price as variables
+  -
 
 
 ## Takeaways and limitation
-- May have spent too much time on the exercise than what I should have. This was mainly due to constant kernel crashes blocking advancements. Crashed were frequent when fitting the model, which I suspect is linked to the size of the data being around 2 GB after the preprocessing. Also used Kaggle's online notebook to run the code, and it also runs without any indication. As this exercise was coded from scratch without consulting others' codes, building on already functioning notebook could also be an option to take. Using less teigonometric features could also lessen the load.
-- Related to the point above, one of the results obtained with ML technique performed worse than more traditional ARIMA, so there might have been features that are more of a noise.
+- May have spent too much time on the exercise than what I should have. This was mainly due to constant kernel crashes blocking advancements, when using HistGradientBoostingRegressor. Crashes were frequent when fitting the model, which I suspect is linked to the size of the data being around 2 GB after the preprocessing (123 columns). Also used Kaggle's online notebook to run the code, but it also runs for indefiniate amount of time, without any indication. As this exercise was coded from scratch without consulting others' codes, building on already functioning notebook could also be an option to take. Using less teigonometric features could also lessen the load.
+  - [Update (3.2.)] As training in batches seemed to be more appropriate for the task, tried making predictions by product groups (i.e. in 33 batches), which stopped crashes. Number of features decreased, as there's no more need to have product columns. A lesson learned.
+- Related to the point above, one of the results obtained with ML technique performed worse than more traditional ARIMA, so there might have been features that are more of noise.
 
 
 ## Future experimentation
-- Work with less complex data
-- Use deep learning models and pre-trained models (notably Facebook Prophet)
+- Focus also on making features more precise, such as differentiating between national and local events, and generating additional features, including events
+- Work with less complex data to properly apply time series-focused feature engineering
+- Consider using other packages (such as dart), deep learning models (LSTM) and pre-trained models (notably Facebook Prophet)
