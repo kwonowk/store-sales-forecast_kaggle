@@ -1,5 +1,6 @@
 # store-sales-forecast_kaggle
 
+https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data
 
 -Objective
 
@@ -19,3 +20,6 @@ Pycaret
 
 3.Pre trained models
 -TFT, what else?
+
+
+- First submission : Setup for modeling per family in each stores, with RandomForestRegressor
