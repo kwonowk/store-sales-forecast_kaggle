@@ -22,4 +22,5 @@ Pycaret
 -TFT, what else?
 
 
-- First submission : Setup for modeling per family in each stores, with RandomForestRegressor
+- First submission : Setup for modeling per family in each stores, with a blunt model (RandomForestRegressor)
+- Second submission : Auto-arima (untreated 0 values at the beginning)
