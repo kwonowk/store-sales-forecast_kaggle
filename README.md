@@ -1,29 +1,43 @@
-# store-sales-forecast_kaggle
+# Kaggle competition : Store Sales - Time Series Forecasting
 
+## Overview
 https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data
 
--Objective
+## Objective
+Become familiar in working with time series data, and practice time-based forecasting
 
-Time series
+## Data
+Time series data tracking product sales across stores of a supermarket chain, categorized by store location and product family in each store. On-going promotions are also provided in the saled data. Detailed store information, list of holidays and events, as well as oil price are provided as separate data.
 
--Data
+## Methodology and results
 
--Approach
-1.Hard coding
-LSTM
+1. Univariate forecast by using SARIMA
+- `Auto-ARIMA` applied to individual product family in each store.
+-  Submission score 0.45655
+2. Multivariate forecast by using SARIMAX
+- `Auto-ARIMA` applied to individual product family in each store, with promotion, national holidays, and oil price as exogenous variables.
+- Submission score 0.47397
+3. Machine Learning
+- HistGradientBoostingRegressor used for prediction, with promotion, national holidays, and oil price as variables.
+- Dates tranformed using teigonometric features to indicate seasonal and cyclical characteristic of data, which are 1)Day in a given year 2)Day in a given month and 3)Day in a given week
+- Lag features of 3-day lags used with window rolling prediction
+- Submission score 3.28478
 
-2.Time series packages
-Auto_TS
-Darts
-ETNA
-Pycaret
+## Takeaways and limitation
+
+
+## Next steps
+
 
 3.Pre trained models
 -TFT, what else?
 
 
-- First submission (0.057679): Setup for modeling per family in each stores, with a blunt model (RandomForestRegressor)
-- Second submission (0.46133): Auto-arima applied to individual product family in each store (untreated 0 values at the beginning)
-- Third submission (0.45510, 157/627) : Auto-arima applied to individual product family in each store, with promotion and national holidays as exogenous variables
-- Fourth submission (1.90147) : HistGradientBoostingRegressor with dates tranformed using teigonometric features
-- Fifth submission (1.79006) : HistGradientBoostingRegressor with lag features and window rolling prediction
+- First submission (0.45655): Auto-arima applied to individual product family in each store (untreated 0 values at the beginning)
+- Second submission (0.47397) : Auto-arima applied to individual product family in each store, with promotion, national holidays, and oil price as exogenous variables
+- Third submission (1.90147) :
+
+
+For later:
+
+LSTM / Facebook prophet
