@@ -21,21 +21,21 @@ Build proficiency in working with time series data by practicing forecasting tec
 Tools used are highlighted in `pre-formatting`
 
 0. Exploratory Data Analysis
--  Using `pandas` and `matplotlib`
+  -  Using `pandas` and `matplotlib`
 1. Univariate forecast by using SARIMA
-- Auto-ARIMA (in `pmdarima`) applied to individual product family in each store.
--  Submission score 0.45655
+  - Auto-ARIMA (in `pmdarima`) applied to individual product family in each store.
+  -  Submission score 0.45655
 2. Multivariate forecast by using SARIMAX
-- Auto-ARIMA (in `pmdarima`) applied to individual product family in each store, with promotion, national holidays, and oil price as exogenous variables.
-- Submission score 0.47397
+  - Auto-ARIMA (in `pmdarima`) applied to individual product family in each store, with promotion, national holidays, and oil price as exogenous variables.
+  - Submission score 0.47397
 3. Machine Learning technique
-- `HistGradientBoostingRegressor` (in `scikit-learn`) used for prediction, with promotion, national holidays, and oil price as variables.
-- Dates tranformed using teigonometric features to indicate seasonal and cyclical characteristic of data, which are :
-  1)Day in a given year
-  2)Day in a given month and
-  3)Day in a given week
-- Lag features of 3-day lags used with window rolling prediction
-- Submission score 3.28478
+  - `HistGradientBoostingRegressor` (in `scikit-learn`) used for prediction, with promotion, national holidays, and oil price as variables.
+  - Dates tranformed using teigonometric features to indicate seasonal and cyclical characteristic of data, which are :
+    1) Day in a given year
+    2) Day in a given month and
+    3) Day in a given week
+  - Lag features of 3-day lags used with window rolling prediction
+  - Submission score 3.28478
 
 
 ## Takeaways and limitation
