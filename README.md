@@ -19,6 +19,7 @@ Build proficiency in working with time series data by practicing forecasting tec
 
 ## Methodology and results
 Tools used are highlighted in `pre-formatting`
+
 0. Exploratory Data Analysis
 -  Using `pandas` and `matplotlib`
 1. Univariate forecast by using SARIMA
