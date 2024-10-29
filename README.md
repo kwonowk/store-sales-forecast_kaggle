@@ -39,7 +39,7 @@ Tools used are highlighted in `pre-formatting`
 
 
 ## Takeaways and limitation
-- May have spent too much time on the exercise than what I should have. This was mainly due to constant kernel crashes blocking advancements. Crashed were frequent when fitting the model, which I suspect is linked to the size of the data being around 2 GB after the preprocessing. Also used Kaggle's online notebook to run the code, and it also runs without any indication. As this exercise was coded from scratch without consulting others' codes, building on already functioning notebook could also be an option to take.
+- May have spent too much time on the exercise than what I should have. This was mainly due to constant kernel crashes blocking advancements. Crashed were frequent when fitting the model, which I suspect is linked to the size of the data being around 2 GB after the preprocessing. Also used Kaggle's online notebook to run the code, and it also runs without any indication. As this exercise was coded from scratch without consulting others' codes, building on already functioning notebook could also be an option to take. Using less teigonometric features could also lessen the load.
 - Related to the point above, one of the results obtained with ML technique performed worse than more traditional ARIMA, so there might have been features that are more of a noise.
 
 
