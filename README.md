@@ -18,7 +18,7 @@ Build proficiency in working with time series data by practicing forecasting tec
 
 
 ## Methodology and results
-Tools used are highlighted in `pre-formatting`
+Tools used are highlighted with `pre-formatting`
 
 0. Exploratory Data Analysis
   -  Using `pandas` and `matplotlib`
@@ -30,7 +30,7 @@ Tools used are highlighted in `pre-formatting`
   - Submission score 0.47397
 3. Machine Learning technique
 
-  3.1. `HistGradientBoostingRegressor` (in `scikit-learn`) as estimator, with promotion, national holidays, and oil price as variables
+    3.1. `HistGradientBoostingRegressor` (in `scikit-learn`) as estimator, with promotion, national holidays, and oil price as variables
   - Dates tranformed to cyclical encoding using trigonometric functions to indicate seasonal and cyclical characteristic of data, which are :
     1) Day in a given year
     2) Day in a given month and
@@ -38,7 +38,7 @@ Tools used are highlighted in `pre-formatting`
   - Lag features of 3-day lags used with window rolling prediction, predicting per row
   - Submission score 3.28478
 
-  3.2. `LightGBMRegressor` (in `LightGBM`) as estimator, with promotion, national holidays, and oil price as variables
+    3.2. `LightGBMRegressor` (in `LightGBM`) as estimator, with promotion, national holidays, and oil price as variables
   - Used cyclical encoding, but lag-feature was not used as it's incompatible with training and predicting in batches
   - Trained and predicted on data per product category, in other words, executed the process for 33 times
   - Conducted parameter search on 20% of each product data with limited grid options for efficient use of memory
