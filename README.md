@@ -29,6 +29,7 @@ Tools used are highlighted in `pre-formatting`
   - Auto-ARIMA (in `pmdarima`) applied to individual product family in each store, with promotion, national holidays, and oil price as exogenous variables.
   - Submission score 0.47397
 3. Machine Learning technique
+
   3.1. `HistGradientBoostingRegressor` (in `scikit-learn`) as estimator, with promotion, national holidays, and oil price as variables
   - Dates tranformed to cyclical encoding using trigonometric functions to indicate seasonal and cyclical characteristic of data, which are :
     1) Day in a given year
@@ -36,6 +37,7 @@ Tools used are highlighted in `pre-formatting`
     3) Day in a given week
   - Lag features of 3-day lags used with window rolling prediction, predicting per row
   - Submission score 3.28478
+
   3.2. `LightGBMRegressor` (in `LightGBM`) as estimator, with promotion, national holidays, and oil price as variables
   - Used cyclical encoding, but lag-feature was not used as it's incompatible with training and predicting in batches
   - Trained and predicted on data per product category, in other words, executed the process for 33 times
