@@ -1,5 +1,7 @@
+***
 # Store sales forecasting
-
+Predicting 📦33 product families across 📍55 locations
+***
 
 
 ## Overview
