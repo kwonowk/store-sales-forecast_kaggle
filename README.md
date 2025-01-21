@@ -4,7 +4,7 @@ Predicting 📦33 product families across 📍55 locations
 ***
 
 
-## Overview
+## 📖 Overview
 The objective of the project is to predict sales of thousands of product families sold in various stores.  
 
 
